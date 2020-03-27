@@ -1,0 +1,35 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/laragon/bin:/mnt/c/laragon/bin/apache/httpd-2.4.35-win64-VC15/bin:/mnt/c/laragon/bin/java/jdk-8u131/bin:/mnt/c/laragon/bin/nodejs/node-v12:/mnt/c/laragon/bin/php/php-7.2.19-Win32-VC15-x64:/mnt/c/laragon/bin/python/python-3.6.1:/mnt/c/laragon/bin/python/python-3.6.1/Scripts:/mnt/c/laragon/bin/yarn/bin:/mnt/c/laragon/usr/bin:/mnt/c/Users/ghost/AppData/Roaming/npm:/mnt/c/Users/ghost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ghost/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir '/mnt/c/Users/ghost/Desktop/workstation/covid19/node_modules'
+
+npm manifest: 
+  {
+    "dependencies": {
+      "express": "^4.17.1",
+      "express-prettify": "^0.1.1",
+      "install": "^0.13.0",
+      "pg": "^7.18.2",
+      "point-in-geopolygon": "^1.0.1",
+      "validator": "^13.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
