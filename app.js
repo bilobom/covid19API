@@ -191,7 +191,25 @@ app.get('/api/covid19/:provinceCode',(request,response)=>{
         })
     })
 })
-app.listen(3000, () =>
+
+function normalizePort(val) {
+    var port = parseInt(val, 10);
+  
+    if (isNaN(port)) {
+      // named pipe
+      return val;
+    }
+  
+    if (port >= 0) {
+      // port number
+      return port;
+    }
+  
+    return false;
+  }
+var port = normalizePort(process.env.PORT || '4000');
+
+app.listen(port, () =>
 {
-    console.log(`listening on port 3000.`)
+    console.log("listening on port",port)
 })
