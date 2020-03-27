@@ -2,6 +2,7 @@
 get covid19 stats in Algeria using ministry of health api 
 returns data in one or array as bellow:
 eg: /api/covid19/9 returns 
+```json
         province: {
             codeName: 9,
             french: "BLIDA",
@@ -57,3 +58,4 @@ eg: /api/covid19/9 returns
             }
         ]
     }
+```
