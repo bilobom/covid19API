@@ -103,7 +103,7 @@ app.get('/api/covid19', (request , response) => {
 //get one province statistics
 app.get('/api/covid19/:provinceCode',(request,response)=>{
 
-    let provinceCode= Number(request.params.provinceCode)
+    let provinceCode= Number(request.params.provinceCode)+1
 
     // Must be an 0 < interger < 49 
     if( !Number.isInteger(provinceCode) || provinceCode > 48 || provinceCode < 1){
