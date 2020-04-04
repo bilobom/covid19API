@@ -19,6 +19,20 @@ gets covid19 stats in Algeria using ministry of health api
     $ yarn start
     
 # API refrence: 
+## /api/total 
+
+returns an object in the shape :
+
+``` json
+    {
+        active: 1030,
+        recovered: 62,
+        dead: 130,
+        total: 1222
+    }
+    
+```
+
 ## /api/province/9
 
 returns an object in the shape :
@@ -147,17 +161,5 @@ returns an array of objects in the shape :
     ]
 ```
 
-## /api/total 
 
-returns an object in the shape :
-
-``` json
-    {
-        active: 1030,
-        recovered: 62,
-        dead: 130,
-        total: 1222
-    }
-    
-```
 
