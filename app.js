@@ -103,14 +103,15 @@ app.get('/api/covid19', (request , response) => {
 //get one province statistics
 app.get('/api/covid19/:provinceCode',(request,response)=>{
 
-    let provinceCode= Number(request.params.provinceCode)+1
+    let provinceCode= Number(request.params.provinceCode)
 
     // Must be an 0 < interger < 49 
     if( !Number.isInteger(provinceCode) || provinceCode > 48 || provinceCode < 1){
         response.json({msg:"Please give an Integer number from 1 to 48"})
         return
     } 
-
+    //fixing issue: https://github.com/bilobom/covid19API/issues/2
+    provinceCode+=1
     // change the orderByFields to WILAYA , put resultRecordCount = provinceCode , you get all wilayas
     // up till the last resultRecordCount, and then pop the array to get last result
     let GOV_API_WILAYA='https://services8.arcgis.com/yhz7DEAMzdabE4ro/arcgis/rest/services/Cas_confirme_view/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*&orderByFields=WILAYA&resultRecordCount='+provinceCode;
