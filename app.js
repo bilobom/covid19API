@@ -6,8 +6,7 @@ const app = express()
 app.use(bodyParser.json())
 
 //source :   http://covid19.sante.gov.dz/carte/
-let GOV_API = "https://services8.arcgis.com/yhz7DEAMzdabE4ro/arcgis/rest/services/Cas_confirme_wilaya/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*&orderByFields=Cas_confirm%20desc&resultRecordCount=48";
-
+let GOV_API = "https://services8.arcgis.com/yhz7DEAMzdabE4ro/arcgis/rest/services/Cas_confirme_view/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*&orderByFields=Cas_confirm%20desc&resultRecordCount=48";
 
 app.get('/',(request,response)=>{
     response.json({
@@ -114,7 +113,7 @@ app.get('/api/covid19/:provinceCode',(request,response)=>{
 
     // change the orderByFields to WILAYA , put resultRecordCount = provinceCode , you get all wilayas
     // up till the last resultRecordCount, and then pop the array to get last result
-    let GOV_API_WILAYA='https://services8.arcgis.com/yhz7DEAMzdabE4ro/arcgis/rest/services/Cas_confirme_wilaya/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*&orderByFields=WILAYA&resultRecordCount='+provinceCode;
+    let GOV_API_WILAYA='https://services8.arcgis.com/yhz7DEAMzdabE4ro/arcgis/rest/services/Cas_confirme_view/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*&orderByFields=WILAYA&resultRecordCount='+provinceCode;
     
     https.get(GOV_API_WILAYA,(res)=>{
         let body = "";
