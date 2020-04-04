@@ -1,8 +1,24 @@
-# covid19API
+# Descreption
 
 gets covid19 stats in Algeria using ministry of health api 
 
+## Demo:
+   find a demo on herrokuapp  [here](https://dzcovid19.herokuapp.com/)
+## Dependencies
 
+    $ express
+    
+## Install
+
+    $ git clone https://ghttps://github.com/bilobom/covid19API.git
+    $ cd covid19API
+    $ yarn install
+    
+## Running the project
+
+    $ yarn start
+    
+# API refrence: 
 ## /api/province/9
 
 returns an object in the shape :
